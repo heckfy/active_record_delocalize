@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["heckfy"]
   spec.email         = ["heckfyoz@gmail.com"]
 
-  spec.summary       = "Delocalize tool for active_record"
+  spec.summary       = "Delocalize date, time and number model attributes"
   spec.description   = "Delocalize date, time and number model attributes"
   spec.homepage      = "https://github.com/heckfy/active_record_delocalize"
   spec.license       = "MIT"
