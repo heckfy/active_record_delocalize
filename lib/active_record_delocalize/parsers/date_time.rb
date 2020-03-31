@@ -28,14 +28,8 @@ module ActiveRecordDelocalize
           day_names: Date::DAYNAMES,
           abbr_day_names: Date::ABBR_DAYNAMES
         }
-          .map do |k, v|
-          Hash[(begin
-                              I18n.t!("date.#{k}")
-                rescue StandardError
-                  []
-                            end).compact.zip(v)]
-        end
-          .reduce({}, :merge)
+        .map { |k, v| Hash[(I18n.t!("date.#{k}") rescue []).compact.zip(v)] }
+        .reduce({}, :merge)
       end
 
       def translate(value)
